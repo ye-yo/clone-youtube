@@ -1,4 +1,4 @@
-.title-box{
+main{
     max-width: 1060px;
     width: 90%;
     margin: 0 auto;
@@ -10,4 +10,12 @@
 
 .red{
     color: #e50914;
+}
+
+.btn-wrap{
+    margin-top: 6px;
+}
+
+.btn-wrap button{
+    margin-right: 4px;
 }
