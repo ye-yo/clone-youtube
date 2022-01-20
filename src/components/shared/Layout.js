@@ -13,7 +13,7 @@ function Layout({ children }) {
             <div className={styles.layout}>
                 <Menu />
                 <div className={styles.contents}>
-                    <button className={styles['btn-mode']} onClick={() => setMode(!nightMode)}>{nightMode ? '☀️ Day' : '🌙 Night'} Mode</button>
+                    <button className={styles['btn-mode']} onClick={() => setMode(nightMode => !nightMode)}>{nightMode ? '☀️ Day' : '🌙 Night'} Mode</button>
                     {children}
                 </div>
             </div>
