@@ -3,19 +3,15 @@ import Header from './Header';
 import Menu from './Menu';
 import { useState } from 'react';
 
+function Layout({ children, activeMenu }) {
+    const [hideMenu, setHideMenu] = useState(false);
 
-
-function Layout({ children }) {
-    const [nightMode, setMode] = useState(false)
     return (
-        <div className={`${styles.container} ${nightMode ? styles.night : styles.day}`}>
-            <Header />
+        <div className={styles.container}>
+            <Header hideMenu={hideMenu} setHideMenu={setHideMenu} />
             <div className={styles.layout}>
-                <Menu />
-                <div className={styles.contents}>
-                    <button className={styles['btn-mode']} onClick={() => setMode(nightMode => !nightMode)}>{nightMode ? '☀️ Day' : '🌙 Night'} Mode</button>
-                    {children}
-                </div>
+                {hideMenu || <Menu activeMenu={activeMenu} />}
+                <div className={styles.contents}>{children}</div>
             </div>
         </div>
     );
