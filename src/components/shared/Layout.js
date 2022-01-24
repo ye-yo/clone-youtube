@@ -9,11 +9,11 @@ function Layout({ children, activeMenu }) {
     return (
         <div className={styles.container}>
             <Header hideMenu={hideMenu} setHideMenu={setHideMenu} />
-            <div className={styles.layout}>
+            <div className={styles.layout} >
                 {hideMenu || <Menu activeMenu={activeMenu} />}
-                <div className={styles.contents}>{children}</div>
-            </div>
-        </div>
+                <div className={`${styles.contents}${hideMenu ? ` ${styles.hide}` : ''}`}>{children}</div>
+            </div >
+        </div >
     );
 }
 
