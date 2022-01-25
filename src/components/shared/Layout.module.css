@@ -59,6 +59,8 @@
 .contents {
   margin-left: 240px;
   flex: 1;
+  position: relative;
+  padding-top: 57px;
 }
 
 .contents.hide{

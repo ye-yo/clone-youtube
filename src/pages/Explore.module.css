@@ -1,19 +1,48 @@
-.container {
-    width: 300px;
-    height: 300px;
-  }
-  @media screen and (max-width: 600px) {
-    .container {
-      background-color: black;
-    }
-  }
-  @media screen and (min-width: 600px) and (max-width: 1000px) {
-    .container {
-      background-color: red;
-    }
-  }
-  @media screen and (min-width: 1000px) {
-    .container {
-      background-color: blue;
-    }
-  }
+.filterList{
+  position: fixed;
+    top: 56px;
+    width: var(--ytd-rich-grid-chips-bar-width);
+    z-index: 2020;
+    background-color: white;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: center;
+    flex: none;
+    overflow-x: auto;
+}
+
+button{
+    margin: 12px;
+    margin-left: 0;
+    height: 32px;
+    min-width: 12px;
+    padding: 0 10px;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 16px;
+    box-sizing: border-box;
+    outline: none;
+    overflow: hidden;
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    display: inline-flex;
+    font-size: 14px;
+}
+
+button:first-child{
+  margin-left: 12px;
+}
+
+
+button:hover{
+  background-color: rgba(0,0,0,0.1);
+}
+
+button.selected{
+  background-color: #030303;
+  color: white;
+}
